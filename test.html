@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>F1 Lap Times</title>
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <canvas id="lapChart"></canvas>
+
+    <script>
+        function formatTime(timeInSeconds) {
+            const minutes = Math.floor(timeInSeconds / 60);
+            const seconds = Math.floor(timeInSeconds % 60);
+            const milliseconds = Math.round((timeInSeconds % 1) * 1000);
+
+            return `${minutes}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(3, '0')}`;
+        }
+
+        function getQueryParameter(parameterName) {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return urlParams.get(parameterName);
+        }
+
+        async function fetchLapData(year, race, driver) {
+            const apiUrl = `https://ergast.com/api/f1/${year}/${race}/drivers/${driver}/laps.json?limit=2000`;
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            return data.MRData.RaceTable.Races[0].Laps;
+        }
+
+        function createLapChart(lapTimes) {
+            const lapNumbers = lapTimes.map(lap => lap.number);
+            const lapTimesInSeconds = lapTimes.map(lap => {
+                const timeParts = lap.Timings[0].time.split(":");
+                const minutes = parseInt(timeParts[0]);
+                const seconds = parseFloat(timeParts[1]);
+                return (minutes * 60) + seconds;
+            });
+
+            const formattedTimes = lapTimesInSeconds.map(time => formatTime(time));
+
+            new Chart('lapChart', {
+                type: 'line',
+                data: {
+                    labels: lapNumbers,
+                    datasets: [{
+                        label: "Lap Times",
+                        data: lapTimesInSeconds,
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                        fill: false
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: "Lap Number"
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: "Time (minutes:seconds.milliseconds)"
+                            },
+                            ticks: {
+                                callback: value => formatTime(value)
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: context => {
+                                    const timeInSeconds = context.parsed.y;
+                                    return `Lap: ${context.parsed.x} - Time: ${formatTime(timeInSeconds)}`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        async function initialize() {
+            const year = getQueryParameter('year');
+            const race = getQueryParameter('race');
+            const driver = getQueryParameter('driver');
+
+            const lapTimes = await fetchLapData(year, race, driver);
+            createLapChart(lapTimes);
+        }
+
+        initialize();
+
+    </script>
+</body>
+
+</html>

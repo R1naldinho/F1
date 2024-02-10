@@ -1,0 +1,132 @@
+.light {
+  border-radius: 100%;
+  background: #222;
+  margin: 10px;
+}
+
+.light::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.light-strip.on .light:nth-child(1n + 3) {
+  background: red;
+}
+
+.f1-lights {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+}
+
+.light-strip {
+  background: black;
+  border-radius: 11px;
+  margin: 0 2px;
+  position: relative;
+  flex: 1;
+}
+
+@media (min-width: 435px) {
+  .light-strip {
+    margin: 0 5px;
+    border-radius: 14px;
+  }
+}
+
+.back-board {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 50%;
+  height: 5%;
+  background: #000;
+  transform: translateY(-50%);
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.time {
+  font-size: 90px;
+  font-size: 12vw;
+  line-height: 1;
+  margin: 1rem;
+  text-transform: uppercase;
+  will-change: transform;
+  text-align: center;
+}
+
+.time.anim {
+  animation: bang 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.best {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+@keyframes bang {
+  from {
+    transform: scale(2);
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.results {
+  text-align: center;
+}
+
+.time,
+.best,
+.record {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cardbg {
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#buttons {
+  top: 0 !important;
+}
+
+.col {
+  justify-content: center;
+  display: flex;
+}
+
+#buttons button {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border: 2px solid #ff000d !important;
+  border-radius: 10px !important;
+  background-color: rgba(255, 0, 0, 0.65) !important;
+  color: black;
+
+  width: 100% !important;
+}
+
+#buttons button:hover {
+  border: 2px solid #ff000d !important;
+  border-radius: 10px !important;
+  background-color: rgba(255, 0, 0, 0.65) !important;
+  color: #fffcfc;
+  width: 100% !important;
+  box-shadow: 0px 0px 5px 2px #ffa1a6;
+}

@@ -1,0 +1,218 @@
+/*  COLONNA CENTRALE  */
+.race-card {
+  margin-bottom: 20px;
+  background-image: url("../image/track.jpg");
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 0.9;
+  border: 1px solid black !important;
+  border-radius: 10px !important;
+}
+
+.wikiLink {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.wikiLink:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  text-shadow: 1px 3px 8px rgba(255, 0, 13, 0.8);
+}
+
+.race-card button {
+  font-weight: bold;
+  border: 1px solid #ff000d !important;
+  border-radius: 10px !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.9);
+  width: 100% !important;
+}
+
+.race-card button:hover {
+  border: 1px solid #ff000d !important;
+  border-radius: 10px !important;
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  color: #ff000d;
+  width: 100% !important;
+  box-shadow: 0px 0px 5px 2px #ff000d;
+}
+
+.timer {
+  font-weight: bold;
+  text-align: center;
+  height: 100px !important;
+  padding: 5px !important;
+  padding-top: 10px !important;
+  border-radius: 10px !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.schedule {
+  height: 100px !important;
+}
+
+.championCard {
+  height: 95.5% !important;
+  padding: 20px;
+  background-image: url("../image/race.jpg");
+  background-position: 80% 50%;
+  background-size: flex;
+  background-repeat: no-repeat !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 0.9;
+  border: 1px solid black !important;
+  border-radius: 10px !important;
+}
+
+.championCard button {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border: 2px solid rgb(255, 0, 247) !important;
+  border-radius: 10px !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 0, 247, 0.9);
+  text-shadow: 0px 0px 5px rgb(255, 255, 255);
+  font-weight: bold;
+  width: 100% !important;
+}
+
+.championCard button:hover {
+  border: 2px solid rgb(255, 0, 247) !important;
+  border-radius: 10px !important;
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  color: rgb(255, 0, 247);
+  width: 100% !important;
+  box-shadow: 0px 0px 5px 2px rgba(255, 0, 247, 0.8);
+}
+
+.championCard .Card_text {
+  color: rgb(250, 250, 250) !important;
+  text-shadow: 0px 0px 5px rgb(255, 0, 247);
+  font-size: 25px !important;
+}
+
+@media (max-width: 1300px) {
+  .flex-md-row.flex-column {
+    flex-direction: column;
+  }
+
+  .race-cardBottom {
+    margin-bottom: 85px !important;
+  }
+}
+
+.textcard {
+  height: 95.5% !important;
+  padding: 10px;
+  background-image: url("../image/senna.jpg");
+  background-position: 30%;
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  opacity: 0.9;
+  border: 1px solid black !important;
+  border-radius: 10px !important;
+}
+
+.textcard .Card_text {
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.textcard a {
+  color: black;
+}
+
+.modal-header,
+.modal-footer {
+  border-bottom: 1px #ff000d solid;
+  background-color: #fa0101e0 !important;
+  color: beige !important;
+}
+
+.modal-body {
+  background-color: beige !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 10px;
+}
+
+.tableSchedule {
+  margin-top: 0px !important;
+  border-collapse: separate !important;
+  border-spacing: 8px !important;
+}
+
+.tableScheduleTD {
+  border: 2px solid black !important;
+  box-shadow: #ff000d 0px 5px !important;
+  border-radius: 100px !important;
+  padding: 5px !important;
+  width: 50% !important;
+}
+
+.tableScheduleTD:hover {
+  background-color: rgba(255, 0, 13, 0.8);
+  box-shadow: beige 0px 5px !important;
+  color: beige;
+  border: 2px solid black !important;
+  border-radius: 100px !important;
+  padding: 5px !important;
+  width: 50% !important;
+}
+
+.SessionLabel {
+  margin-top: 2px !important;
+  font-size: 25px;
+  color: #ff000d !important;
+  border-bottom: 4px solid #ff000d !important;
+  border-radius: 3px !important;
+}
+
+.tableScheduleSession {
+  font-weight: bolder;
+  font-size: large;
+}
+
+.tableScheduleSession:hover {
+  color: beige;
+}
+
+#color-picker {
+  height: 50px !important;
+  width: 50% !important;
+  padding: 2px;
+  border: solid 2px black !important;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 2px #ff000d;
+}
+
+#BackgroundColorLabel {
+  padding-top: 15px;
+}
+
+.background-preview {
+  height: 50px !important;
+  background-image: url("https://www.transparenttextures.com/patterns/real-carbon-fibre.png");
+  border-radius: 20px;
+  border: solid 3px black;
+  box-shadow: 0px 0px 5px 2px #ff000d;
+}
+
+#team-select {
+  color: beige;
+  margin-top: 5px;
+  border-radius: 10px !important;
+  background-color: rgba(255, 0, 13, 0.6) !important;
+}
+
+#team-select:focus {
+  border: solid 2px beige;
+  border-radius: 10px !important;
+  box-shadow: 0px 0px 5px 2px #ff000d;
+  background-color: rgba(255, 0, 13, 0.6) !important;
+}

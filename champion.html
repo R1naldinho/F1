@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="keywords" content="Formula 1, F1, Ferrari">
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Simone Rinaldi">
+    <meta http-equiv="Content-Language" content="en">
+
+
+
+    <title>F1</title>
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/champion.css" />
+    <script deref src="./script/champion.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+
+
+    <nav class="navbar sticky-top">
+        <div class="container-fluid">
+            <a href="index.html">
+                <img src="image/logo.png" width="100px">
+            </a>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menù</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!--MENU BODY-->
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="allSeason.html">ALL SEASON</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active " aria-current="page" href="reactionTime.html">REACTION TEST</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active selectedPage" aria-current="page" href="champion.html">CHAMPIONS QUIZ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active " aria-current="page" href="Telemetria/index.html">TELEMETRY</a>
+                        </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+
+
+    <!-- Main content -->
+    <div class="container text-center">
+        <div class="row">
+
+            <div class="container">
+                <div class="container text-center">
+                    <div class="row flex-column flex-md-row">
+                        <div class="col">
+                            <div id="div-timer">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row flex-column flex-md-row">
+                        <div class="col">
+                            <div id="div-progress">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row flex-column flex-md-row">
+                        <div class="col">
+                            <div id="div-card">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer style="position: fixed;">
+        <span>website created for educational purposes</span>
+    </footer>
+</body>
+
+
+</html>
